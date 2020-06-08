@@ -1,6 +1,6 @@
 DATA_NAME:=monaco
-DATA_URL:=https://s3.amazonaws.com/mapbox/osrm/testing/$(DATA_NAME).osm.pbf
-DATA_POLY_URL:=https://s3.amazonaws.com/mapbox/osrm/testing/$(DATA_NAME).poly
+DATA_URL:=http://ss2.fluorinedog.com/data/osrm_data/$(DATA_NAME).osm.pbf
+DATA_POLY_URL:=http://ss2.fluorinedog.com/data/osrm_data/$(DATA_NAME).poly
 OSRM_BUILD_DIR?=../../build
 PROFILE_ROOT:=../../profiles
 SCRIPT_ROOT:=../../scripts

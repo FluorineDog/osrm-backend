@@ -38,8 +38,8 @@ int main(int argc, const char *argv[])
     // - Contraction Hierarchies (CH): requires extract+contract pre-processing
     // - Multi-Level Dijkstra (MLD): requires extract+partition+customize pre-processing
     //
-    // config.algorithm = EngineConfig::Algorithm::CH;
-    config.algorithm = EngineConfig::Algorithm::MLD;
+    config.algorithm = EngineConfig::Algorithm::CH;
+    // config.algorithm = EngineConfig::Algorithm::MLD;
 
     // Routing machine with several services (such as Route, Table, Nearest, Trip, Match)
     const OSRM osrm{config};
@@ -55,6 +55,7 @@ int main(int argc, const char *argv[])
     engine::api::ResultT result = json::Object();
 
     // Execute routing request, this does the heavy lifting
+
     const auto status = osrm.Route(params, result);
 
     auto &json_result = result.get<json::Object>();
